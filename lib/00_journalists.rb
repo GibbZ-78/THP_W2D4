@@ -235,6 +235,7 @@ end
 # OUT : nil (puts)
 def distrib_handles # Choix 8 du menu
   my_hash={}
+  length_tmp=""
   puts
   puts $decalage+"Méthode : parcours brut du tableau des 'handles' et :"
   puts $decalage+"  - soit création d'un nouvel 'id_longueur' avec valeur à 1 (i.e. première fois qu'on rencontre un handle de cette longueur"
@@ -248,7 +249,16 @@ def distrib_handles # Choix 8 du menu
     end
   end
   puts
-  puts $decalage+"  > "+my_hash.to_s
+  puts $decalage+"  > "+my_hash.sort_by { |key, val| key.to_s.to_i }.to_s
+  puts
+  my_hash.sort_by { |key, val| key.to_s.to_i }.each do |key1,val1|
+    if key1.to_s.to_i < 10 
+      length_tmp = "0#{key1}"
+    else
+      length_tmp = key1.to_s
+    end
+    puts $decalage+"    "+ length_tmp + " "+("*"*val1)+" #{val1}"
+  end
 end
 
 
