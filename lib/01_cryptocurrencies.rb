@@ -7,6 +7,17 @@
 #
 
 
+# perform - Programme principal
+# IN  : -
+# DO  : A l'invocation, lance le menu permettant de répondre aux question de l'exercice
+# OUT : -
+def perform
+end
+
+
+# Invocation de la méthode "Programme principal"
+perform
+
 
 # Fin du code
 #01_cryptocurrencies.rb by ***, ***, *** & Jean-Baptiste VIDAL for THP Developpeur Hiver 2022
